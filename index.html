@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<!DOCTYPE html PUBLIC “- //W3C//DTD XHTML 1.0 Transitional //EN” “https: //www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
 <html lang="pt-br" xmlns=“https://www.w3.org/1999/xhtml”>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -43,13 +43,8 @@
       color: #515151;
     }
 
-    .button {
-      color: #fff;
-      background-color: #09B2AB;
-      padding: 12px 8px;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
+    a:link, a:hover, a:visited, a:active {
+      color: #ffffff!important;
     }
   </style>
 </head>
@@ -61,7 +56,7 @@
           <table width="100%">
             <tr>
               <td style="text-align: center;padding: 20px;">
-                <img src="https://i.ibb.co/BZ71ymS/logo-paguemenos.png" alt="logo-paguemenos">
+                  <img src="https://i.ibb.co/BZ71ymS/logo-paguemenos.png" alt="logo-paguemenos">
               </td>
             </tr>
             <tr>
@@ -75,12 +70,18 @@
                   <tr>
                     <td style="padding: 30px 40px;">
                       <h1 style="font-size: 24px; color: #515151;">
-                        Olá,<br>Camila Pedretti.
+                        Olá,<br>{{cliente_nome}}
                       </h1>
 
-                      <p style="font-size: 18px; color: #515151; font-weight: 700;">
-                        Você tem um atendimento agendado.
+                      <p style="font-size: 24px; color: #0054A6; font-weight: 700; margin-bottom: 14px;">
+                        Aguardamos você amanhã!
                       </p>
+
+                      <p style="color: #515151; margin-bottom: 25px; line-height: 22px;">
+                        Pensando no <strong style="color: #0054A6">seu bem-estar</strong>, preparamos nosso consultório para<br>te atender com toda segurança.<br>Seu farmacêutico te aguarda na hora marcada,<br>contamos com a sua presença.
+                      </p>
+
+                      <strong style="color: #0054A6">Obrigado pela preferência.</strong>
                     </td>
                   </tr>
                 </table>
@@ -96,7 +97,7 @@
                           <td style="padding-bottom: 15px">
                             <img src="https://i.ibb.co/vdVx54g/icon-calendar.png" alt="Calendário">
                             <p style="display: inline-block; margin: 0; margin-left: 10px; font-size: 14px; font-weight: 500; color:#515151;">
-                              10/02/2021
+                              {{data_agendamento}}
                             </p>
                           </td>
                         </tr>
@@ -104,15 +105,7 @@
                           <td style="padding-bottom: 15px">
                             <img src="https://i.ibb.co/PWBVXfF/icon-clock.png" alt="Relógio">
                             <p style="display: inline-block; margin: 0; margin-left: 10px; font-size: 14px; font-weight: 500; color:#515151;">
-                              15:00
-                            </p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding-bottom: 15px">
-                            <img src="https://i.ibb.co/vdVx54g/icon-calendar.png" alt="Calendário">
-                            <p style="display: inline-block; margin: 0; margin-left: 10px; font-size: 14px; font-weight: 500; color:#515151;">
-                              10/02/2021
+                              {{hora_agendamento}}
                             </p>
                           </td>
                         </tr>
@@ -120,16 +113,15 @@
                           <td style="padding-bottom: 8px">
                             <img src="https://i.ibb.co/tqJJsMB/icon-gps.png" alt="Ícone-Gps">
                             <p style="display: inline-block; margin: 0; margin-left: 10px; font-size: 14px; font-weight: 500; color:#515151;">
-                              Rua São Bento, 308
+                              {{Unidade}}
                             </p>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding-bottom: 20px">
                             <p style="color: #666666; margin: 0; font-size: 14px;">
-                              Sé, 1010000 - São Paulo/SP
-                              <br>
-                              Tel: (11) 3101-9505/982368905
+                              {{loja_endereco}}
+                              {{telefoneTopo}}
                             </p>
                           </td>
                         </tr>
@@ -137,9 +129,9 @@
                           <td>
                             <img src="https://i.ibb.co/Ns9cbx1/icon-clock-blue.png" alt="Relógio">
                             <p style="display: inline-block; margin: 0; margin-left: 6px; margin-right: 10px; font-size: 16px; font-weight: 500; color:#014CAB;">
-                              Tempo Total de atendimento:
+                                Tempo Total de atendimento:
                             </p>
-                            <span style="color: #666666; font-size: 14px;">45 min</span>
+                            <span style="color: #666666; font-size: 14px;">{{TempoTotal}}</span>
                           </td>
                         </tr>
                       </table>
@@ -154,44 +146,23 @@
                   <tr>
                     <td style="padding: 0 40px;">
                       <p style="color: #0054A6; font-weight: 700; margin: 0; padding-bottom: 6px; border-bottom: 1px solid #C4C4C4;">
-                        Resumo do pedido
+                          Resumo do pedido
                       </p>
 
                       <table width="100%" style="padding-top: 18px;">
                         <tr>
                           <td style="text-align: left;">
-                            <p style="color:#383838; font-size: 14px; margin-bottom: 13px;">
-                              Teste Covid (Antígeno)
-                            </p>
-
-                            <p style="color:#383838; font-size: 14px; margin-bottom: 13px;">
-                              Teste Covid (Anticorpo)
-                            </p>
-
-                            <p style="color:#383838; font-size: 14px; margin-bottom: 13px;">
-                              Teste Covid (PCR)
-                            </p>
-
+                            {{NomeServicos}}
                             <p style="color:#515151; font-size: 16px; font-weight: 700; margin-bottom: 13px;">
-                              Total
+                                Total
                             </p>
                           </td>
 
                           <td style="text-align: right;">
-                            <p style="color:#383838; font-size: 14px; margin-bottom: 13px;">
-                              R$ 145,98
-                            </p>
-
-                            <p style="color:#383838; font-size: 14px; margin-bottom: 13px;">
-                              R$ 175,98
-                            </p>
-
-                            <p style="color:#383838; font-size: 14px; margin-bottom: 13px;">
-                              R$ 185,98
-                            </p>
+                            {{PrecoServicos}}
 
                             <p style="color:#515151; font-size: 16px; font-weight: 700; margin-bottom: 13px;">
-                              R$ 507,94
+                              R$  {{TotalServicos}}
                             </p>
                           </td>
                         </tr>
@@ -219,17 +190,29 @@
                 <table width="100%">
                   <tr>
                     <td style="padding: 0 40px;">
-                      <div style="border: 1px solid #0054A6; border-radius: 3px; padding: 25px 10px 20px 27px;">
-                        <p style="font-size: 18px; color: #0054A6; font-weight: 700; background-color: #fff; width: 203px; margin: 0; transform: translate(-18px, -40px); padding: 0 5px;">
-                          Informações adicionais
-                        </p>
+                      <fieldset style="border: 1px solid #0054A6; border-radius: 3px; padding: 25px 10px 20px 27px;">
+                        <legend style="font-size: 18px; color: #0054A6; font-weight: 700; background-color: #fff; padding: 0 5px;">
+                            Informações adicionais
+                        </legend>
 
                         <p style="margin: 0; color: #515151; font-size: 14px; margin-bottom: 20px;">
-                          <strong>O pagamento deverá ser realizado em loja </strong>com os meios de pagamento:<br>Débito, Crédito, Dinheiro e Convênio.
+                            <strong>O pagamento deverá ser realizado em loja </strong>com os meios de pagamento:<br />Débito, Crédito, Dinheiro e Convênio.
                         </p>
 
-                        <p style="margin: 0; color: #515151; font-size: 14px;"><strong>Caso não possa comparecer </strong>ao seu atendimento, entre em contato<br>com a clínica.</p>
-                      </div>
+                        <p style="margin: 0; color: #515151; font-size: 14px; margin-bottom: 8px;"><strong>Caso não possa comparecer </strong>ao seu atendimento, entre em contato<br />
+                          com a clínica.
+                        </p>
+
+                        <table cellspadding="0"cellspacing="0"style="background: blue; width: 241px; background-color: #09B2AB;" align="center">
+                          <tr>
+                            <td width="300"height="30" valign="middle" bgcolor="#09B2AB" align="center" style="color: #ffffff!important">
+                                <a href="#" target="_blank" class="button" style="display: inline-block; color: #ffffff!important; padding: 12px 8px; border: none;border-radius: 6px; text-decoration: none; cursor: pointer;">
+                                  Realizar outro agendamento
+                                </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </fieldset>
                     </td>
                   </tr>
                 </table>
@@ -288,10 +271,10 @@
                     <td style="padding: 0 40px;">
                       <img src="https://i.ibb.co/BZ71ymS/logo-paguemenos.png" alt="logo-paguemenos">
                       <p style="color: #515151; font-weight: 500; font-size: 14px; margin-top: 17px; margin-bottom: 3px;">
-                        Unidade São Bento I
+                        {{Unidade}}
                       </p>
                       <p style="color: #666666; font-size: 12px; line-height: 20px; margin: 0;">
-                        Rua São Bento, 308 - Sé, 1010000 - São Paulo/SP<br>Tel: (11) 3101-9505<br>Tel: (11) 982368905
+                        {{loja_endereco}} {{telefoneRodape}}
                       </p>
                     </td>
                   </tr>
@@ -305,7 +288,7 @@
                     <td style="text-align: justify;">
                       <div style="background-color: #F9F9F9; padding: 40px 50px;">
                         <p style="margin: 0; color: #515151; font-size: 12px;">
-                          Este é um e-mail automático das FARMÁCIAS PAGUE MENO. Por favor, não o responda. Para maiores informações, ou caso não deseje receber mais estes e-mails, entre em contato com a clínica onde foi realizado o seu agendamento ou com o nosso SAC FARMA 0800 275 1313.
+                            Este é um e-mail automático das FARMÁCIAS PAGUE MENO. Por favor, não o responda. Para maiores informações, ou caso não deseje receber mais estes e-mails, entre em contato com a clínica onde foi realizado o seu agendamento ou com o nosso SAC FARMA 0800 275 1313.
                         </p>
                       </div>
                     </td>
